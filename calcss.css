@@ -1,0 +1,74 @@
+*,*::before,*::after{
+    box-sizing: border-box;
+    font-family: sans-serif;
+    font-weight:bold;
+    font-size:30px;
+}
+
+body{
+    background:linear-gradient(to left, gold,silver,black) ;
+}
+.calculator-grid{
+    
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    min-height: 80vh;
+    grid-template-columns: repeat(4,100px);
+    grid-template-rows: minmax(120px,auto) repeat(5,100px);
+    margin-top: 50px;
+    /* background-color: aqua; */
+}
+.calculator-grid>button{
+    cursor:pointer;
+    border: 1px solid black;
+    outline: none;
+    background-color:antiquewhite ;
+}
+.output{
+    
+    background-color: rgb(232, 235, 212);
+    grid-column: 1/-1;
+    /* margin-top: 20px; */
+    border: 10px solid black;
+
+
+}
+.calculator-grid>button:hover{
+    background-color: white;
+}
+.span-two{
+    grid-column:span 2;
+}
+.calculator-grid > .AC,
+.calculator-grid > .one,
+.calculator-grid > .four,
+.calculator-grid > .seven{
+    border-left: 6px solid black;
+}
+
+.calculator-grid > .dot{
+    border-left: 6px solid black;
+    border-bottom:6px solid black ;
+}
+.calculator-grid > .zero{
+    border-bottom: 6px solid black;
+}
+.calculator-grid > #equal{
+    border-bottom: 6px solid black;
+    border-right:6px solid black ;
+}
+.calculator-grid > .minus,.calculator-grid > .plus,.calculator-grid > .mul,.calculator-grid > .slash{
+    border-right: 6px solid black;
+}
+
+.output .previous-operand{
+    color: rgb(49, 47, 47);
+    font-size: 1.3rem;
+
+}
+
+.output .current-operand{
+    color: black;
+    font-size: 1.7rem;
+}
